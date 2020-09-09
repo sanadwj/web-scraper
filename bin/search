@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+# rubocop : disable Layout/LineLength
 
 require 'httparty'
 require 'nokogiri'
@@ -33,7 +34,6 @@ scraping = Scraper.new
 scraping.country(@choice)
 scraping.scraper(@array)
 
-
 # initialize Searches class
 save = Searches.new(@array)
 save.start_html
@@ -45,4 +45,4 @@ puts "Jobs found for the position #{@array.join(' ')} is #{scraping.titles.count
 puts 'You can find a visual file of your search information in :'
 puts "jobs/job_listing_for_#{@array.join('_')}"
 
-
+# rubocop : enable Layout/LineLength
