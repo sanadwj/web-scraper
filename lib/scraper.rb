@@ -1,5 +1,8 @@
-# frozen_string_literal: true
+# rubocop : disable Layout/LineLength
 
+# rubocop : disable Metrics/AbcSize
+
+# rubocop : disable Metrics/MethodLength
 class Scraper
   attr_writer :choice
   attr_reader :jobs, :job, :total, :page, :titles, :company, :locations, :websites, :experience, :requirements, :response, :parsed_page, :countrys, :user_response, :pagination
@@ -29,7 +32,7 @@ class Scraper
     @page = 1
     per_page = jobs_listing.count
     @total = parsed_page.css('span.jobsFound')[0].attributes['title'].value.gsub(' ', ' ').to_i
-    @last_page = (total.to_f / per_page.to_f).round
+    @last_page = (total / per_page.to_f).round
     while @page <= @last_page
       @pagination = @countrys + "-#{@page}"
       pagination_response = HTTParty.get(@pagination)
@@ -60,3 +63,9 @@ class Scraper
     end
   end
 end
+
+# rubocop : enable Layout/LineLength
+
+# rubocop : enable Metrics/AbcSize
+
+# rubocop : enable Metrics/MethodLength

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
+# rubocop : disable Layout/LineLength
 
 require 'httparty'
 require 'nokogiri'
@@ -44,3 +44,5 @@ save.close_file
 puts "Jobs found for the postion #{@array.join(' ')} is #{scraping.titles.count}"
 puts 'You can find a visual file of your search information in :'
 puts "jobs/job_listing_for_#{@array.join('_')}"
+
+# rubocop : enable Layout/LineLength

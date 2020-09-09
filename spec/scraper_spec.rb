@@ -1,3 +1,5 @@
+# rubocop : disable Layout/LineLength
+
 require_relative '../lib/scraper'
 
 describe Scraper do
@@ -29,3 +31,5 @@ describe Scraper do
     end
   end
 end
+
+# rubocop : enable Layout/LineLength

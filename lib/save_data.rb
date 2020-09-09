@@ -1,3 +1,7 @@
+# rubocop : disable Layout/LineLength
+
+# rubocop : disable Metrics/ParameterLists
+
 class Searches
   attr_reader :file
   def initialize(arr)
@@ -29,3 +33,7 @@ class Searches
     @file.close
   end
 end
+
+# rubocop : enable Layout/LineLength
+
+# rubocop : enable Metrics/ParameterLists
