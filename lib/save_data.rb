@@ -7,7 +7,7 @@ class Searches
 
   def initialize(arr)
     prefix = '../jobs/job_listing_for_'
-    @file = File.open(prefix + "#{arr.join('-')}.html", 'w+')
+    @file = File.open(prefix + "#{arr[0]}.html", 'w+')
   end
 
   def start_html

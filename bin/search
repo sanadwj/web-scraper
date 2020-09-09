@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# rubocop : disable Layout/LineLength
+
 
 require 'httparty'
 require 'nokogiri'
@@ -14,7 +14,7 @@ puts location.display_country
 puts
 puts 'Please select your choice From the countries listed above :'
 @choice = gets.chomp.to_i
-until @choice <= 44
+while @choice >= 44 || @choice < 1 || @choice.nil?
   puts 'Wrong entry, please choose again :'
   @choice = gets.chomp.to_i
 end
@@ -32,7 +32,7 @@ puts 'Searching . . .'
 scraping = Scraper.new
 scraping.country(@choice)
 scraping.scraper(@array)
-scraping.jobs
+
 
 # initialize Searches class
 save = Searches.new(@array)
@@ -45,4 +45,4 @@ puts "Jobs found for the position #{@array.join(' ')} is #{scraping.titles.count
 puts 'You can find a visual file of your search information in :'
 puts "jobs/job_listing_for_#{@array.join('_')}"
 
-# rubocop : enable Layout/LineLength
+

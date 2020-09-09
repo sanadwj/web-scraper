@@ -1,24 +1,9 @@
 # rubocop : disable Layout/LineLength
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# rubocop : disable Lint/ParenthesesAsGroupedExpression
-
-=======
->>>>>>> a946ffc... Fix linters
-=======
-# rubocop : disable Lint/ParenthesesAsGroupedExpression
-
->>>>>>> d706a2a... Fix linters
-=======
-# rubocop : disable Lint/ParenthesesAsGroupedExpression
-
->>>>>>> 4e2f737caa84d81790c1287381a6587d1bfe3ba0
 require_relative '../lib/scraper'
 
 describe Scraper do
-  let (:input) { Scraper.new }
+  let(:input) { Scraper.new }
   context 'initialize' do
     it 'Initialize empty arrays' do
       expect(input.titles.empty? && input.experience.empty? && input.locations.empty? && input.requirements.empty? && input.websites.empty? && input.company.empty?).to eq(true)
@@ -32,6 +17,12 @@ describe Scraper do
     it 'Take the user choice for the country' do
       expect(input.countrys).to eq(@choice)
     end
+    it 'Return false if the user input not exist' do
+      expect(input.nil?).to eq(false)
+    end
+    it 'Return false if the user input bigen 44 and less than 1' do
+      expect(input.countrys == 100).to eq(false)
+    end
   end
 
   context 'scraper' do
@@ -44,22 +35,10 @@ describe Scraper do
     it 'Start pagination over the contry page' do
       expect(input.pagination).to eq(@countrys)
     end
+    it 'Return false if the user input not exist' do
+      expect(input.nil?).to eq(false)
+    end
   end
 end
 
 # rubocop : enable Layout/LineLength
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-# rubocop : enable Lint/ParenthesesAsGroupedExpression
-=======
->>>>>>> a946ffc... Fix linters
-=======
-
-# rubocop : enable Lint/ParenthesesAsGroupedExpression
->>>>>>> d706a2a... Fix linters
-=======
-
-# rubocop : enable Lint/ParenthesesAsGroupedExpression
->>>>>>> 4e2f737caa84d81790c1287381a6587d1bfe3ba0
