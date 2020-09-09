@@ -6,7 +6,10 @@
 
 ## Concept
 > Web scraping, web harvesting, or web data extraction is data scraping used for extracting data from websites. Web scraping software may access the World Wide Web directly using the Hypertext Transfer Protocol, or through a web browser. While web scraping can be done manually by a software user, the term typically refers to automated processes implemented using a bot or web crawler. It is a form of copying, in which specific data is gathered and copied from the web, typically into a central local database or spreadsheet, for later retrieval or analysis.
- 
+### Usage
+
+- Personal Project - Create a scraping program in Ruby to scrap https://www.naukrigulf.com/ for te position want to scrap over and sve the data in html file.
+<br>
   ![](gif1.gif) 
 ## 🛠 Getting Started
 
@@ -103,9 +106,7 @@ jobs/job_listing_for_developer
  - Using Linters for Ruby Rubocop.
  - Using Bundler.
 
-### Usage
 
-- Personal Project - Create a scraping program in Ruby to scrap the given webpage for te position want to scrap over  .
 
 ## 👤 Authors
 
