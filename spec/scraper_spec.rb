@@ -1,7 +1,15 @@
 # rubocop : disable Layout/LineLength
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 # rubocop : disable Lint/ParenthesesAsGroupedExpression
 
+=======
+>>>>>>> a946ffc... Fix linters
+=======
+# rubocop : disable Lint/ParenthesesAsGroupedExpression
+
+>>>>>>> d706a2a... Fix linters
 require_relative '../lib/scraper'
 
 describe Scraper do
@@ -35,5 +43,13 @@ describe Scraper do
 end
 
 # rubocop : enable Layout/LineLength
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 # rubocop : enable Lint/ParenthesesAsGroupedExpression
+=======
+>>>>>>> a946ffc... Fix linters
+=======
+
+# rubocop : enable Lint/ParenthesesAsGroupedExpression
+>>>>>>> d706a2a... Fix linters
