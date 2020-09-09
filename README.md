@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-🧐 Scraper Project
+# Scraper Project
 
 > Ruby's Scraper Project Project
 
