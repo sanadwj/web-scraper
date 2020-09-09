@@ -1,3 +1,7 @@
+# rubocop : disable Lint/ParenthesesAsGroupedExpression
+
+# rubocop : disable Layout/LineLength
+
 require_relative '../lib/country_display'
 
 describe Country do
@@ -12,3 +16,7 @@ describe Country do
     end
   end
 end
+
+# rubocop : enable Lint/ParenthesesAsGroupedExpression
+
+# rubocop : enable Layout/LineLength

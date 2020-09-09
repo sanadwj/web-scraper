@@ -1,12 +1,17 @@
+# rubocop : disable Layout/LineLength
+
+# rubocop : disable Metrics/ParameterLists
+
 class Searches
   attr_reader :file
+
   def initialize(arr)
-    prefix = './jobs/job_listing_for_'
+    prefix = '../jobs/job_listing_for_'
     @file = File.open(prefix + "#{arr.join('-')}.html", 'w+')
   end
 
   def start_html
-    File.open('./Create_html/start.txt').each do |line|
+    File.open('../html/start.txt').each do |line|
       @file.puts line
     end
   end
@@ -20,7 +25,7 @@ class Searches
   end
 
   def end_html
-    File.open('./Create_html/end.txt').each do |line|
+    File.open('../html/end.txt').each do |line|
       @file.puts line
     end
   end
@@ -29,3 +34,7 @@ class Searches
     @file.close
   end
 end
+
+# rubocop : enable Layout/LineLength
+
+# rubocop : enable Metrics/ParameterLists
