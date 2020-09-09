@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
+# rubocop : disable Layout/LineLength
 
 require 'httparty'
 require 'nokogiri'
@@ -20,27 +20,29 @@ until @choice <= 44
 end
 
 # initialize Scraper class
-puts 'Enter postion separated by space :'
+puts 'Enter position separated by space :'
 word = gets.chomp
 while word.empty?
   puts 'Try again invalid input :'
   word = gets.chomp
 end
-puts 'Please be patien it could take up to 20 min depend on the country vacancies'
-puts 'Serching . . .'
+puts 'Please be patient it could take up to 20 min depend on the country vacancies'
+puts 'Searching . . .'
 @array = word.split(' ')
 scraping = Scraper.new
 scraping.country(@choice)
 scraping.scraper(@array)
 scraping.jobs
 
-# initialize Scraper class
+# initialize Searches class
 save = Searches.new(@array)
 save.start_html
 save.store(scraping.titles, scraping.company, scraping.experience, scraping.locations, scraping.requirements, scraping.websites)
 save.end_html
 save.close_file
 
-puts "Jobs found for the postion #{@array.join(' ')} is #{scraping.titles.count}"
+puts "Jobs found for the position #{@array.join(' ')} is #{scraping.titles.count}"
 puts 'You can find a visual file of your search information in :'
 puts "jobs/job_listing_for_#{@array.join('_')}"
+
+# rubocop : enable Layout/LineLength
