@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'httparty'
+require 'nokogiri'
+require 'byebug'
+require_relative '../lib/country_display'
+require_relative '../lib/scraper'
+require_relative '../lib/save_data'
+
+# initialize country class
+location = Country.new
+puts location.display_country
+puts
+puts 'Please select your choice From the countries listed above :'
+@choice = gets.chomp.to_i
+until @choice <= 44
+  puts 'Wrong entry, please choose again :'
+  @choice = gets.chomp.to_i
+end
+
+# initialize Scraper class
+puts 'Enter postion separated by space :'
+word = gets.chomp
+while word.empty?
+  puts 'Try again invalid input :'
+  word = gets.chomp
+end
+puts 'Please be patien it could take up to 20 min depend on the country vacancies'
+puts 'Serching . . .'
+@array = word.split(' ')
+scraping = Scraper.new
+scraping.country(@choice)
+scraping.scraper(@array)
+scraping.jobs
+
+# initialize Scraper class
+save = Searches.new(@array)
+save.start_html
+save.store(scraping.titles, scraping.company, scraping.experience, scraping.locations, scraping.requirements, scraping.websites)
+save.end_html
+save.close_file
+
+puts "Jobs found for the postion #{@array.join(' ')} is #{scraping.titles.count}"
+puts 'You can find a visual file of your search information in :'
+puts "jobs/job_listing_for_#{@array.join('_')}"

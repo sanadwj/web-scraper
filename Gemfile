@@ -2,9 +2,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem 'rubocop', '~>0.81.0'
+gem 'byebug'
 gem 'httparty'
 gem 'nokogiri'
-gem 'byebug'
-gem 'faraday'
-gem 'selenium-webdriver', '~> 2.53', '>= 2.53.4'
+gem 'rubocop', '~>0.81.0'

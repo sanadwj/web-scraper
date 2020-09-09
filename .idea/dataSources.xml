@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="jdbc:exa:localhost:" uuid="07ef82ac-24f8-4afb-a619-e7355d3be067">
+      <driver-ref>exasol</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.exasol.jdbc.EXADriver</jdbc-driver>
+      <jdbc-url>jdbc:exa:localhost:</jdbc-url>
+    </data-source>
+  </component>
+</project>
