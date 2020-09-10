@@ -7,7 +7,7 @@ require 'nokogiri'
 require 'byebug'
 require_relative '../lib/country_display'
 require_relative '../lib/scraper'
-require_relative '../lib/Searches'
+require_relative '../lib/searches'
 
 # initialize country class
 location = Country.new
