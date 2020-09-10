@@ -1,4 +1,4 @@
-require_relative '../lib/save_data'
+require_relative '../lib/searches.rb'
 
 describe Searches do
   let(:input) { Searches.new('developer') }
