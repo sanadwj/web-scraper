@@ -6,12 +6,12 @@ class Searches
   attr_reader :file
 
   def initialize(arr)
-    prefix = '../jobs/job_listing_for_'
+    prefix = './jobs/job_listing_for_'
     @file = File.open(prefix + "#{arr[0]}.html", 'w+')
   end
 
   def start_html
-    File.open('../html/start.txt').each do |line|
+    File.open('./html/start.txt').each do |line|
       @file.puts line
     end
   end
@@ -25,7 +25,7 @@ class Searches
   end
 
   def end_html
-    File.open('../html/end.txt').each do |line|
+    File.open('./html/end.txt').each do |line|
       @file.puts line
     end
   end
