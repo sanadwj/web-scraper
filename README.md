@@ -44,8 +44,9 @@
         ```       
 - Run the program with this code :
         ```
-        ruby search
+        ruby main.rb
         ```
+
 ### 📝 How To Run
    - When run the scraper a list of cites will shown:
     
@@ -97,8 +98,15 @@ jobs/job_listing_for_developer
   
     
   ![](graphics/gif2.gif) 
+- If there is no position for the search in the city try to select a country, eg: ```26, 1, 8, 29 0r 35```
+        
+        ```
+        Please be patient it could take up to 20 min depend on the country vacancies
+        Searching . . .
+        Jobs found for the position developer is 0
 
-
+        ```
+    
 ## Screenshots
     
  ![screenshot](graphics/screenshot1.png)
